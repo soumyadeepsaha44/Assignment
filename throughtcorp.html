@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>scroll trigger</title>
+    <style type="text/css">
+
+<div class="zoom"></div>
+    </style>
+    <link rel="stylesheet" type="text/css" href="throughtcorp.css">
+</head>
+<body>
+    <h1>WELCOME</h1>
+    <br><br>
+    <div class="box"><h2>SOUMYADEEP</h2></div>
+    <div class="box"><h2>ABHIJIT</h2></div>
+    <div class="box"><h2>PRASANTA</h2></div>
+    <div class="box"><h2>SOURAV</h2></div>
+    <div class="box"><h2>RIYA</h2></div>
+    <div class="box"><h2>GARGI</h2></div>
+    <div class="box"><h2>MOLOY</h2></div>
+    <div class="box"><h2>AVISEK</h2></div>
+
+    <script type="text/javascript">
+        const boxes =document.querySelectorAll('.box')
+        window.addEventListener('scroll',checkBoxes)
+        checkBoxes()
+        function checkBoxes()
+        {
+            const triggerBottom=window.innerHeight / 5 * 4
+            boxes.forEach(box =>{
+                const boxTop = box.getBoundingClientRect().top 
+                if(boxTop < triggerBottom)
+                {
+                    box.classList.add('show')
+                }else{
+                    box.classList.remove('show')
+                }
+            })
+        }
+
+    </script>
+
+</body>
+</html>
